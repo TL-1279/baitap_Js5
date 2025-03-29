@@ -1,0 +1,186 @@
+
+  html,
+  :host {
+  
+    line-height: 1.5;
+  
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+  }
+  
+  
+  body {
+    margin: 0;
+    /* 1 */
+    line-height: inherit;
+    /* 2 */
+      background-image: url('https://www.freeppt7.com/uploads/200411/1-200411214504M2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+  }
+  
+  
+  h1,
+  h2,
+  h3{
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+
+  }
+  
+
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
+  
+ 
+  button,input,
+  select,
+  textarea {
+    font-family: inherit;
+    /* 1 */
+    font-feature-settings: inherit;
+    /* 1 */
+    font-variation-settings: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    font-weight: inherit;
+    /* 1 */
+    line-height: 1.5;
+    /* 1 */
+    letter-spacing: inherit;
+    /* 1 */
+    color: inherit;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+    padding: 0;
+    /* 3 */
+  }
+  
+
+  button,
+  select {
+    text-transform: none;
+  }
+  
+ 
+
+  textarea {
+    resize: vertical;
+  }
+  
+  
+  
+  button,
+  [role="button"] {
+    cursor: pointer;
+    display: block;
+              padding: 10px;
+              background-color: blue;
+              color: white;
+              text-decoration: none;
+              border-radius: 5px;
+              width: 150px;
+              text-align: center;
+              margin: 20px 20px;
+  }
+  
+  
+  :disabled {
+    cursor: default;
+  }
+  
+  
+  /* Tạo class tùy chỉnh */
+  
+  .tab-btn {
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 64 175 / var(--tw-bg-opacity, 1));
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  }
+  
+  .tab-btn:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+  
+  }
+  .sidebar {
+    width: 250px; /* Độ rộng cố định */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    z-index: 10; /* Đặt trên nền */
+    backdrop-filter: blur(10px); /* Hiệu ứng mờ */
+    background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-simple-reading-cartoon-background-border-picture-image_1011743.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .container {
+    display: flex;
+    height: 100vh; /* Chiều cao toàn màn hình */
+    
+  } 
+  
+  .content{
+    background-image: url('https://www.freeppt7.com/uploads/200411/1-200411214504M2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+      padding: 24px;
+      margin-left: 16px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  }
+  .content-box {
+    display: none;
+    padding: 40px;
+    background-color: floralwhite;
+    border: 1px solid #0f0e0e;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin: 50px;
+    
+  
+  }
+  
+  /* Khi phần tử được target, hiển thị nội dung */
+  .content-box:target {
+    display: block;
+    
+  }
+
+  .col-4 {
+    width: 100%; 
+    max-width: 300px; 
+    margin-bottom: 10px;
+    width: calc(33.333%-5px); 
+    display: grid;
+    margin-right: 10px;
+    
+   
+}
+
+   
+    .col-4:nth-child(3n) {
+        margin-right: 0;
+    }
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập toán tử</title>
+
+    <!-- tailwindcss -->
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+<div class="container">
+    <div class="sidebar">
+    <button class="button" data-tab="bai1">
+        <a href="#bai1">📖 Bài 1</a>
+    </button>
+   
+    <button class="button" data-tab="bai2">
+        <a href="#bai2">📖 Bài 2</a>
+    </button>
+    <button class="button" data-tab="bai3">
+        <a href="#bai3">📖 Bài 3</a>
+    </button>
+    <button class="button" data-tab="bai4">
+        <a href="#bai4">📖 Bài 4</a>
+    </button>
+    
+    </div>
+
+<!-- Nội dung hiển thị -->
+<div class="content">
+    <div id="bai1" class="content-box">
+        <h2 class="text-xl font-bold">📖 Bài 1: Quản lý tuyển sinh</h2>
+        <p class="mt-2">Trúng tuyển nếu có điểm tổng kết lớn hơn hoặc bằng điểm chuẩn và không có môn nào không điểm </p>
+        <div class="col-4">
+            <input placeholder="Nhập điểm chuẩn" type="number" class="form-control" id="inputDiemChuan">
+        </div>
+        <div class="col-4">
+        <select class="form-select" id="selectKhuVuc">
+            <option>Chọn khu vực</option>
+            <option value="0">X</option>
+            <option value="2">A</option>
+            <option value="1">B</option>
+            <option value="0.5">C</option>
+        </select>
+        </div>
+        <div class="col-4">
+            <select class="form-select" id="selectDoiTuong">
+                <option>Chọn đối tượng</option>
+                <option value="0">Không thuộc ưu tiên</option>
+                <option value="2.5">Đối tương 1</option>
+                <option value="1.5">Đối tương 2</option>
+                <option value="1">Đối tương 3</option>
+            </select>
+        </div>
+       
+        <!-- <input type="number" id="soNgay" placeholder="số ngày làm" class="border p-2 rounded my-2"> -->
+        <div class="col-4">
+            <!-- ctrl + d: chọn các vùng nội dung giống nhau -->
+            <input placeholder="Nhập điểm 1" type="number" class="form-control" id="inputDiem1">
+        </div>
+        <div class="col-4">
+            <input placeholder="Nhập điểm 2" type="number" class="form-control" id="inputDiem2">
+        </div>
+        <div class="col-4">
+            <input placeholder="Nhập điểm 3" type="number" class="form-control" id="inputDiem3">
+        </div>
+        <!-- hàng 3 -->
+            <button id="btnSubmit1" type="button" class="btn btn-primary mb-3">Tính điểm</button>
+        <p class="mt-4 font-semibold" id="result1"></p>
+    </div>
+
+    <div id="bai2" class="content-box">
+        <h2 class="text-xl font-bold">📖 Bài 2: Tính tiền điện</h2>
+        <p class="mt-2">Thông tin người dùng và số điện tiêu thụ
+        </p>
+        <div class="col-4">
+            <!-- <label for="inputDiemChuan">Điểm chuẩn</label> -->
+            <input placeholder="Nhập họ tên" type="text" class="form-control" id="ten">
+        </div>
+        <div class="col-4">
+            <input placeholder="Nhập số kw" type="number" class="form-control" id="soKw">
+        </div>
+       
+            <button id="btnSubmit2" type="button" class="btn btn-primary mb-3">Tính tiền điện</button>
+        <p class="mt-4 font-semibold" id="result2"></p>
+    </div>
+
+    <div id="bai3" class="content-box">
+        <h2 class="text-xl font-bold">📖 Bài 3: Tính thuế thu nhập cá nhân</h2>
+        <p class="mt-2">Thuế thu nhập cá nhân phải trả theo quy định</p>
+        <div class="col-4">
+            <!-- <label for="inputDiemChuan">Điểm chuẩn</label> -->
+            <input placeholder="Nhập họ tên" type="text" class="form-control" id="hoTen">
+        </div>
+        <div class="col-4">
+            <input placeholder="Nhập tổng thu nhập" type="number" class="form-control" id="thuNhap">
+        </div>
+        <div class="col-4">
+            <input placeholder="Nhập số người phụ thuộc" type="number" class="form-control" id="soNguoi">
+               
+        </div>
+       
+            <button id="btnSubmit3" type="button" class="btn btn-primary mb-3">Tính tiền thuế</button>
+        <p class="mt-4 font-semibold" id="result3"></p>
+    </div>
+
+    <!-- Bài 4: -->
+    <div id="bai4" class="content-box">
+        <h2 class="text-xl font-bold">📖 Bài 4: Tính tiền cáp</h2>
+        <p class="mt-2">Hoá đơn khách hàng</p>
+        
+        <div class="col-4">
+            <select class="form-select" id="selectKhachHang" onchange="toggleSoKetNoi()">
+                <option value="">Chọn loại khách hàng</option>
+                <option value="nhaDan">Nhà Dân</option>
+                <option value="doanhNghiep">Doanh nghiệp</option>
+            </select>
+        </div>
+    
+        <div class="col-4">
+            <input placeholder="Nhập mã khách hàng" type="text" class="form-control" id="khachHang">
+        </div>
+    
+        <div class="col-4">
+            <input placeholder="Nhập số kênh cao cấp" type="number" class="form-control" id="soKenh">
+        </div>
+    
+        <!-- Ô nhập số kết nối (Ẩn mặc định) -->
+        <div class="col-4" id="soKetNoi" style="display: none;">
+            <input placeholder="Nhập số kết nối" type="number" class="form-control">
+        </div>
+    
+        <button type="button" class="btn btn-primary mb-3">Tính tiền cáp</button>
+        <p class="mt-4 font-semibold"></p>
+    </div>
+    
+    
+
+        <script src="./js/main.js"></script>
+</body> 
+</html>
+
+
+    
